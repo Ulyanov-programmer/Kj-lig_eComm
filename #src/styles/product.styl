@@ -1,0 +1,164 @@
+@import '_mixins'
+
+:root {
+  --btn-bor-c: #000
+  --btn-active-c: #ebe5dc
+}
+
+.dark {
+  --btn-bor-c: #fff
+  --btn-active-c: rgba(235, 229, 220, 0.246)
+}
+
+.product-block {
+  &__body {
+    flex-set: row nowrap
+
+    @media (max-width: 768px) {
+      flex-direction: column
+      flex-content-position($jc: center, $ai: center)
+    }
+  }
+
+  &__image {
+    position: relative
+    flex: 1 1 45%
+
+    @media (max-width: 768px) {
+      padding-bottom: 20px
+      width: 90%
+    }
+
+    img {
+      block-size: 100%
+      hide()
+      transition: all 0.2s ease
+
+      &.active {
+        show()
+      }
+    }
+
+    .decor-line {
+      margin-top: 7px
+
+      @media (min-width: 768px) {
+        display: none
+      }
+
+      &__subline {
+        width: 20%
+      }
+    }
+  }
+
+  &__in-favs {
+    position: absolute
+    top: 3%
+    right: 5%
+    z-index: 1
+  }
+
+  &__about {
+    flex-set: column nowrap
+    firstLevelElementsMargin: 'bottom' 20
+    flex: 1 1 45%
+    flex-grow: 1
+    padding: 12px
+
+    @media (min-width: 768px) {
+      flex-content-position($jc: center, $ai: center)
+      text-align: center
+    }
+
+    @media (max-width: 426px) {
+      flex-set: column nowrap
+      firstLevelElementsMargin: 'bottom' 10
+    }
+  }
+
+  &__main-about {
+    flex-set: column nowrap
+    firstLevelElementsMargin: 'right' 10
+    justify-content: space-between
+
+    @media (max-width: 768px) {
+      flex-direction: row
+    }
+  }
+
+  &__title {
+    display: inline-block
+    font-family: KronaOne
+    font-size: 22px
+  }
+
+  &__price {
+    font-weight: 500
+  }
+
+  &__brand-name {
+    display: inline-block
+    text-transform: uppercase
+    font-weight: 500
+    font-size: 15px
+
+    &.new {
+      &:after {
+        padding-left: 5px
+        content: 'NEW!'
+        color: #E37A7A
+      }
+    }
+  }
+
+  &__accord-buttons {
+    margin: 0 -3px
+
+    >* {
+      margin: 3px
+    }
+
+    @media (max-width: 426px) {
+      margin: 0 -7px
+
+      >* {
+        margin: 7px
+      }
+    }
+  }
+
+  &__accord-btn {
+    text-transform: uppercase
+    font-weight: 500
+    font-size: 20px
+    width: 60px
+    height: 58px
+    padding: 5px
+    border: 1px solid var(--btn-bor-c)
+    transition: all 0.2s ease
+
+    &.active, &:hover, &:focus {
+      background: var(--btn-active-c)
+    }
+  }
+
+  &__add-to-card {
+    font-weight: 500
+    font-size: 20px
+    text-transform: uppercase
+    color: #fff
+    padding: 15px 100px
+    background: #000
+    border: 1px solid #fff
+    transition: all 0.2s ease
+
+    &:hover, &:focus {
+      filter: invert()
+    }
+
+    @media (max-width: 768px) {
+      width: 100%
+    }
+  }
+}

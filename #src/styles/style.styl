@@ -1,0 +1,401 @@
+/* Insert layout width below.
+If this is not done, when using a responsive font, the result will not match the layout.
+Please note that specifying a value less than 425 is dangerous for the psyche. */
+$burgerMenuShowWidth = 730px
+
+:root {
+  --text-c: #0D0D0E
+  --font-family: Jost
+  --bg: #fff
+  --header-bg: #EBE5DC
+  --icon-c: #0D0D0E
+  --dec-line-c: #D7D7D7
+  --dec-subline-c: #0D0D0E
+  --slider-btn-c: #000
+  --header-links-color: #929292
+  --header-active-links-color: #000
+  --cat-prod-bg: #fff
+}
+
+.dark {
+  --text-c: #fff
+  --bg: #1D1D1F
+  --header-bg: #48433D
+  --icon-c: #fff
+  --dec-line-c: #2D2925
+  --dec-subline-c: #48433D
+  --slider-btn-c: #48433D
+  --header-links-color: #d1d1d1
+  --header-active-links-color: #fff
+  --cat-prod-bg: #48433D
+}
+
+@import '_vars'
+@import 'modules/_nullStyle'
+@import '_footer'
+@import '_fonts'
+@import '_general'
+@import '_header'
+@import '_mixins'
+@import 'modules/_submenu'
+
+body {
+  position: relative
+  height: 100%
+  color: var(--text-c)
+  font: adapt-fsize($mainFontSize, $minFontSize) var(--font-family)
+
+  &.scroll-block {
+    overflow: hidden
+  }
+
+  button {
+    font-family: var(--font-family)
+    color: var(--text-c)
+  }
+}
+
+.main {
+  width: 100%
+
+  &__body {
+    background: var(--bg)
+  }
+}
+
+.fullscreen {
+  position: relative
+
+  &__body {
+    text-align: center
+    color: #fff
+  }
+
+  &__slider {
+    height: 100vh
+    min-height: 700px
+
+    @media (max-width: 768px) {
+      min-height: 500px
+    }
+  }
+
+  &__pag {
+    span {
+      background: #fff
+      opacity: 1
+      transition: all 0.4s ease
+      border: 2px solid #ffffff00
+
+      &.active {
+        transform: scale(1.5)
+        background: gray
+        border-color: #fff
+      }
+    }
+  }
+}
+
+.fullscreen-slide {
+  padding-top: 20%
+  background: url('../img/') no-repeat center / cover
+
+  &__body {
+    flex-set: column nowrap
+    height: 100%
+    flex-content-position($jc: center, $ai: center)
+    firstLevelElementsMargin: 'bottom' 20
+    padding-bottom: 60px
+  }
+
+  &__title {
+    text-shadow: 0 0 20px #000
+    font-family: KronaOne
+    font-size: adapt-fsize(80, 30)
+  }
+
+  &__decor {
+    padding-bottom: 80px
+
+    img {
+      animation: decor-spin linear 10s infinite
+    }
+
+    @keyframes decor-spin {
+      0% {
+        transform: rotate(0)
+      }
+
+      50% {
+        transform: rotate(180deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+  }
+
+  &__text {
+    text-shadow: 0 0 20px #000
+  }
+
+  &__text-ref {
+    color: inherit
+    text-decoration: underline
+    padding: 5px 5px 5px 5px
+
+    &:hover, &:focus {
+      text-decoration: none
+    }
+  }
+}
+
+.slider {
+  overflow: hidden
+
+  &__body {
+    firstLevelElementsMargin: 'bottom' 10
+  }
+
+  &__title {
+  }
+
+  &__control {
+    position: relative
+    flex-set: row nowrap
+    justify-content: flex-end
+  }
+
+  &__prev, &__next {
+    rect {
+      fill: var(--slider-btn-c)
+    }
+
+    &:hover, &:focus {
+      rect {
+        fill: #4b4b48
+      }
+    }
+
+    &.unactive {
+      opacity: 0.3
+    }
+  }
+
+  &__prev {
+    padding-right: 5px
+  }
+
+  &__next {
+  }
+
+  &__slider-wrapper {
+    margin-right: -10%
+    padding-right: 10px
+  }
+
+  // This is necessary for the transparency of the last slide.
+  // The fewer selectors there are, the earlier transparency will begin.
+  // use with watchSlidesVisibility: true for slider!
+  .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+    img {
+      opacity: 0.25
+    }
+  }
+
+  &_mini-cards {
+    .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+      img {
+        opacity: 1
+      }
+    }
+
+    .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+      img {
+        opacity: 0.25
+      }
+    }
+  }
+}
+
+.collection-card {
+  max-width: 264px
+
+  &_mini {
+    .collection-card__image {
+      padding-bottom: 140%
+
+      img {
+        object-fit: cover
+      }
+    }
+  }
+
+  &__body {
+    firstLevelElementsMargin: 'bottom' 10
+  }
+
+  &__image {
+    padding-bottom: 140%
+
+    img {
+      transition: all 0.4s ease
+      object-fit: contain
+      border-radius: 16px
+    }
+  }
+
+  &__title {
+    display: inline-block
+    font-size: 18px
+    font-family: KronaOne
+  }
+
+  &__about {
+    color: #929292
+  }
+}
+
+.decor-line {
+  position: relative
+  width: 100%
+  height: 1.5px
+  background: var(--dec-line-c)
+
+  &__subline {
+    position: absolute
+    top: 0
+    left: 0
+    height: 1.5px
+    width: 40%
+    background: var(--dec-subline-c)
+  }
+}
+
+.title {
+  color: var(--text-c)
+  font-size: 36px
+  font-family: KronaOne
+}
+
+.block {
+  padding: 20px 0 20px 0
+}
+
+.favs {
+  cursor: pointer
+
+  svg, path {
+    transition: all 0.2s ease
+  }
+
+  @media (min-width: 426px) {
+    svg {
+      block-size: 30px 28px
+    }
+  }
+
+  &.active, &:hover, &:focus {
+    svg, path {
+      fill: #E37A7A
+      stroke: #E37A7A
+    }
+  }
+}
+
+.dollars {
+  &:before {
+    content: '$'
+  }
+}
+
+.product {
+  background: var(--bg)
+
+  &__body {
+    flex-set: row nowrap
+    justify-content: space-between
+    padding: 15px
+    firstLevelElementsMargin: 'right' 30
+
+    &:hover, &:focus {
+      .product__title {
+        text-decoration: underline
+      }
+    }
+  }
+
+  &__image {
+  }
+
+  &__content {
+    flex-set: column nowrap
+    justify-content: space-between
+    color: var(--text-c)
+    text-align: right
+  }
+
+  &__title {
+    font-weight: 600
+  }
+
+  &__price {
+  }
+}
+
+.categ-product {
+  &__body {
+    font-size: adapt-fsize(16, 14)
+    background: var(--cat-prod-bg)
+    border-radius: 16px
+  }
+
+  &__main {
+    padding: 10px
+    firstLevelElementsMargin: 'bottom' 5
+  }
+
+  &__image {
+    img {
+      width: 100%
+      border-top-right-radius: 16px
+      border-top-left-radius: 16px
+    }
+  }
+
+  &__brand {
+    display: block
+    text-transform: uppercase
+    font-weight: 500
+    color: var(--text-c)
+  }
+
+  &__title {
+    display: block
+    color: var(--text-c)
+  }
+
+  &__footer {
+    padding-top: 11px
+    flex-set: row nowrap
+    justify-content: space-between
+    align-items: flex-end
+  }
+
+  &__price {
+    color: #0D0D0E
+    font-weight: 600
+    font-size: 12px
+    padding: 5px 6px 5px 12px
+    background: url('../img/price-bg.svg') no-repeat center / contain
+  }
+
+  &__favorites {
+    @media (max-width: 426px) {
+      svg {
+        block-size: 30px 28px
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.searchbar {
+  flex-set: row nowrap
+  background: #fff
+  border-radius: 5px
+
+  &__input {
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+    padding: 10px
+    min-width: 300px
+
+    @media (max-width: 426px) {
+      min-width: 100px
+    }
+  }
+
+  &__submit {
+    padding: 0 10px 0 10px
+    transition: all 0.3s ease
+
+    img {
+      block-size(20px)
+    }
+  }
+}

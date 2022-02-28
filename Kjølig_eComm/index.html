@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->
+  <!-- Disables forced link for phone number on iOS -->
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="description" content="Kjølig e-commerce">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="./img/favicon.svg">
+  <link rel="mask-icon" href="./img/favicon.svg" color="#000000">
+  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="manifest" href="manifest.json"> -->
+
+  <link rel="preload" href="fonts/Jost-VariableFont_wght.woff2" as="font" crossorigin>
+
+  <!-- SEO
+    <meta name="keywords" content="keyword1,">
+    <meta name="robots" content="none,noindex,nofollow,noimageindex,noarchive,nosnippet">
+    <meta name="Author" content="Author">
+    <meta name="Copyright" content="Copyright">
+    <meta name="Address" content="Address"> 
+    <! - Redirect (reload) the page. Delay in seconds; url=Site / page address ->
+    <meta http-equiv="refresh" content="seconds; url = URL">
+
+    Facebook
+    <! - site localization, for the Russian-language site ru_RU ->
+    <meta property="og:locale" content="ru_RU">
+    <! - content type, default is article ->
+    <meta property="og:type" content="article">
+    <! - the title of the page that will be displayed in the post of the social network ->
+    <meta property="og:title" content="META tags">
+    <! - page description ->
+    <meta property="og:description" content="Description of the page about META tags">
+    <! - link to the image that will be published in the post ->
+    <meta property="og:image" content="path">
+    <! - link to the current page ->
+    <meta property="og: url" content="path">
+    <! - site name ->
+    <meta property="og:site_name" content="Freelancer for life">
+
+    Twitter
+    <! - Map type, default is summary ->
+    <meta name="twitter: card" content="summary">
+    <! - Author name / login ->
+    <meta name="twitter: site" content="Ivan">
+    <! - Page title ->
+    <meta name="twitter: title" content="META tags">
+    <! - Page description ->
+    <meta name="twitter: description" content="about META tags">
+    <! - Link to image ->
+    <meta name="twitter: image" content="path">
+  -->
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!--? Use this if you want set multiple files. -->
+  
+  
+
+  <title>Kjølig</title>
+</head>
+
+<body>
+  <header class="header">
+  <div class="header__body">
+    <div class="header__top">
+      <div class="header__top-container container">
+        <ul>
+          <li><a class='header__top-ref' href='#' target='_blank' rel='noopener noreferrer'>Women</a></li>
+          <li><a class='header__top-ref' href='#' target='_blank' rel='noopener noreferrer'>Men</a></li>
+          <li><a class='header__top-ref' href='#' target='_blank' rel='noopener noreferrer'>Kids</a></li>
+          <li>
+            <button id="themeToggler" class='header__top-ref' type='button'>Toggle theme</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__bottom-container container">
+        <nav class="header__navmenu navmenu">
+          <div class="navmenu__body">
+            <ul class='navmenu__list'>
+              <li><a class="active" href='/' target='_blank' rel='noopener noreferrer'>Main</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>New in</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Shop By</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Brand</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Cloathing</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Shoes</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Accessories</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__left-menu">
+          <button aria-label="burger-menu" type="button" id="burgerButton" class="header__burger burger-btn">
+            <svg class="burger-btn__svg" width="25" height="30" viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
+              <rect class="burger-btn__rect-top" width="100%" height="10%" x="0" y="0%" fill="#fff" />
+              <rect class="burger-btn__rect-center" width="60%" height="10%" x="0" y="45%" fill="#fff" />
+              <rect class="burger-btn__rect-bottom" width="100%" height="10%" x="0" y="90%" fill="#fff" />
+            </svg>
+          </button>
+          <button data-modal-link="search" type="button" aria-label="search product" class="actions__item">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
+                fill="#0D0D0E" />
+            </svg>
+          </button>
+        </div>
+        <a href="/" class="header__logo logo" aria-label="logo-RefToMainPage">
+          <svg width="70" height="20" viewBox="0 0 70 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M0.226074 2.02588H2.85742V8.74121L9.70557 2.02588H13.0757L6.68408 8.21826L13.0757 15H9.57275L4.7915 10.0527L2.85742 11.9204V15H0.226074V2.02588ZM11.8721 17.1499C12.2539 16.9175 12.5804 16.674 12.8516 16.4194C13.1283 16.1649 13.3551 15.8826 13.5322 15.5728C13.7093 15.2684 13.8394 14.9281 13.9224 14.5518C14.0054 14.1699 14.0469 13.7383 14.0469 13.2568V2.02588H16.6782V12.7837C16.6782 13.3592 16.6533 13.8849 16.6035 14.3608C16.5537 14.8312 16.4707 15.2629 16.3545 15.6558C16.2438 16.0542 16.0916 16.4194 15.8979 16.7515C15.7098 17.0835 15.4746 17.3989 15.1924 17.6978C14.9157 17.9966 14.5864 18.2843 14.2046 18.561C13.8283 18.8377 13.3911 19.1172 12.8931 19.3994L11.8721 17.1499ZM31.6777 0.307617H34.0601L21.6587 17.042H19.2764L31.6777 0.307617ZM19.2847 8.47559C19.2847 7.49609 19.4645 6.59961 19.8242 5.78613C20.1839 4.97266 20.6875 4.27539 21.335 3.69434C21.988 3.10775 22.7682 2.65397 23.6758 2.33301C24.5889 2.01204 25.5988 1.85156 26.7056 1.85156C27.8068 1.85156 28.814 2.01204 29.7271 2.33301C30.6401 2.65397 31.4204 3.10775 32.0679 3.69434C32.7209 4.27539 33.2272 4.97266 33.5869 5.78613C33.9466 6.59961 34.1265 7.49609 34.1265 8.47559C34.1265 9.46061 33.9466 10.3654 33.5869 11.1899C33.2272 12.009 32.7209 12.7145 32.0679 13.3066C31.4204 13.8988 30.6401 14.3608 29.7271 14.6929C28.814 15.0194 27.8068 15.1826 26.7056 15.1826C25.5988 15.1826 24.5889 15.0194 23.6758 14.6929C22.7682 14.3608 21.988 13.8988 21.335 13.3066C20.6875 12.7145 20.1839 12.009 19.8242 11.1899C19.4645 10.3654 19.2847 9.46061 19.2847 8.47559ZM21.916 8.47559C21.916 9.14518 22.035 9.74837 22.2729 10.2852C22.5164 10.8219 22.8512 11.2812 23.2773 11.6631C23.709 12.0394 24.2153 12.3299 24.7964 12.5347C25.383 12.7394 26.0194 12.8418 26.7056 12.8418C27.3918 12.8418 28.0254 12.7394 28.6064 12.5347C29.193 12.3299 29.6994 12.0394 30.1255 11.6631C30.5516 11.2812 30.8864 10.8219 31.1299 10.2852C31.3734 9.74837 31.4951 9.14518 31.4951 8.47559C31.4951 7.80599 31.3734 7.20557 31.1299 6.67432C30.8864 6.14307 30.5516 5.69482 30.1255 5.32959C29.6994 4.95882 29.193 4.6766 28.6064 4.48291C28.0254 4.28923 27.3918 4.19238 26.7056 4.19238C26.0194 4.19238 25.383 4.28923 24.7964 4.48291C24.2153 4.6766 23.709 4.95882 23.2773 5.32959C22.8512 5.69482 22.5164 6.14307 22.2729 6.67432C22.035 7.20557 21.916 7.80599 21.916 8.47559ZM37.0483 2.02588H39.6797V12.6924H47.2251V15H37.0483V2.02588ZM49.4497 2.02588H52.0977V15H49.4497V2.02588ZM54.5713 8.39258C54.5713 7.47949 54.7428 6.62728 55.0859 5.83594C55.429 5.03906 55.9299 4.34733 56.5884 3.76074C57.2469 3.17415 58.0549 2.71208 59.0122 2.37451C59.9751 2.03695 61.0763 1.86816 62.3159 1.86816C62.7642 1.86816 63.2124 1.89307 63.6606 1.94287C64.1144 1.98714 64.5599 2.05908 64.9971 2.15869C65.4398 2.2583 65.8687 2.38558 66.2837 2.54053C66.7043 2.68994 67.1027 2.86979 67.479 3.08008L66.2671 5.07227C66.0402 4.93945 65.7829 4.82048 65.4951 4.71533C65.2074 4.60465 64.8975 4.51335 64.5654 4.44141C64.2389 4.36393 63.8986 4.30583 63.5444 4.26709C63.1958 4.22835 62.8444 4.20898 62.4902 4.20898C61.6712 4.20898 60.9408 4.31413 60.2988 4.52441C59.6569 4.72917 59.1146 5.01969 58.6719 5.396C58.2292 5.76676 57.8916 6.21224 57.6592 6.73242C57.4268 7.2526 57.3105 7.82259 57.3105 8.44238C57.3105 9.08431 57.4323 9.67367 57.6758 10.2104C57.9193 10.7472 58.2651 11.2093 58.7134 11.5967C59.1616 11.984 59.7039 12.2884 60.3403 12.5098C60.9767 12.7256 61.6878 12.8335 62.4736 12.8335C63.099 12.8335 63.6717 12.7643 64.1919 12.626C64.7121 12.4821 65.1659 12.2801 65.5532 12.02C65.9406 11.7599 66.256 11.4473 66.4995 11.082C66.743 10.7113 66.9035 10.2962 66.981 9.83691H62.4487V7.67041H69.3467V7.67871L69.355 7.67041C69.4933 8.33447 69.5348 8.98193 69.4795 9.61279C69.4297 10.2381 69.2858 10.8302 69.0479 11.3892C68.8154 11.9425 68.4945 12.4517 68.085 12.9165C67.6755 13.3813 67.1857 13.7826 66.6157 14.1201C66.0457 14.4521 65.3983 14.7122 64.6733 14.9004C63.9484 15.083 63.1543 15.1743 62.291 15.1743C61.0846 15.1743 60.0028 14.9972 59.0454 14.6431C58.0936 14.2889 57.2856 13.8047 56.6216 13.1904C55.9575 12.5762 55.4484 11.8568 55.0942 11.0322C54.7456 10.2077 54.5713 9.3278 54.5713 8.39258Z"
+    fill="#000" />
+</svg>
+        </a>
+        <div class="header__actions actions">
+          <button data-modal-link="search" type="button" aria-label="search product" class="actions__item actions__search">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
+                fill="#0D0D0E" />
+            </svg>
+          </button>
+          <button type="button" id="favorites" aria-label="favorites" class="actions__item actions__favorites submenu-open-button">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.001 1.52898C12.35 -0.58002 15.98 -0.51002 18.243 1.75698C20.505 4.02498 20.583 7.63698 18.479 9.99298L9.99901 18.485L1.52101 9.99298C-0.582994 7.63698 -0.503994 4.01898 1.75701 1.75698C4.02201 -0.50702 7.64501 -0.58302 10.001 1.52898ZM16.827 3.16998C15.327 1.66798 12.907 1.60698 11.337 3.01698L10.002 4.21498L8.66601 3.01798C7.09101 1.60598 4.67601 1.66798 3.17201 3.17198C1.68201 4.66198 1.60701 7.04698 2.98001 8.62298L10 15.654L17.02 8.62398C18.394 7.04698 18.319 4.66498 16.827 3.16998Z"
+                fill="#0D0D0E" />
+            </svg>
+
+            <ul id="favoritesMenu" class="submenu submenu_to-left">
+              <li><article class="product">
+  <a href="#" class="product__body">
+    <div class="product__image">
+<picture><source srcset="img/content/card-mini5.avif" type="image/avif"><source srcset="img/content/card-mini5.webp" type="image/webp"><img src="img/content/card-mini5.jpg" loading='lazy' alt='product1' width=50 height=50></picture>
+    </div>
+    <div class="product__content">
+      <span class="product__title">ProductName</span>
+      <span class="product__price">10₽</span>
+    </div>
+  </a>
+</article></li>
+              <li><article class="product">
+  <a href="#" class="product__body">
+    <div class="product__image">
+<picture><source srcset="img/content/card-mini5.avif" type="image/avif"><source srcset="img/content/card-mini5.webp" type="image/webp"><img src="img/content/card-mini5.jpg" loading='lazy' alt='product1' width=50 height=50></picture>
+    </div>
+    <div class="product__content">
+      <span class="product__title">ProductName</span>
+      <span class="product__price">10₽</span>
+    </div>
+  </a>
+</article></li>
+            </ul>
+            <div class="actions__counter active">2</div>
+          </button>
+          <button type="button" id="card" aria-label="your cart" class="actions__item submenu-open-button">
+            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17 20H1C0.734784 20 0.48043 19.8946 0.292893 19.7071C0.105357 19.5196 0 19.2652 0 19V1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V19C18 19.2652 17.8946 19.5196 17.7071 19.7071C17.5196 19.8946 17.2652 20 17 20ZM16 18V2H2V18H16ZM6 4V6C6 6.79565 6.31607 7.55871 6.87868 8.12132C7.44129 8.68393 8.20435 9 9 9C9.79565 9 10.5587 8.68393 11.1213 8.12132C11.6839 7.55871 12 6.79565 12 6V4H14V6C14 7.32608 13.4732 8.59785 12.5355 9.53553C11.5979 10.4732 10.3261 11 9 11C7.67392 11 6.40215 10.4732 5.46447 9.53553C4.52678 8.59785 4 7.32608 4 6V4H6Z"
+                fill="#0D0D0E" />
+            </svg>
+
+            <ul id="cardMenu" class="submenu submenu_to-left">
+              <li><article class="product">
+  <a href="#" class="product__body">
+    <div class="product__image">
+<picture><source srcset="img/content/card-mini5.avif" type="image/avif"><source srcset="img/content/card-mini5.webp" type="image/webp"><img src="img/content/card-mini5.jpg" loading='lazy' alt='product1' width=50 height=50></picture>
+    </div>
+    <div class="product__content">
+      <span class="product__title">ProductName</span>
+      <span class="product__price">10₽</span>
+    </div>
+  </a>
+</article></li>
+            </ul>
+          </button>
+        </div>
+      </div>
+
+
+      <nav class="fullscreen-navmenu">
+        <div class="fullscreen-navmenu__body">
+          <ul>
+            <li><a class="fs-element" href='/' target='_blank' rel='noopener noreferrer'>Main</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>New in</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Shop By</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Brand</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Cloathing</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Shoes</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Accessories</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <main class="main">
+    <div class="main__body">
+      <section class="fullscreen">
+        <h1 hidden>Your title for searchers</h1>
+        <div class="fullscreen__body">
+          <div class='fullscreen__slider swiper'>
+            <div class='swiper-wrapper'>
+              <div class='swiper-slide fullscreen-slide' style="background-image: url(./img/content/hero.webp);">
+                <div class="fullscreen-slide__body container">
+                  <h2 class="fullscreen-slide__title">Valentine’s day</h2>
+                  <div class="fullscreen-slide__decor">
+                    <img src="img/text-circle.svg" alt='' width=110 height=110>
+                  </div>
+                  <p class="fullscreen-slide__text">
+                    Special Touch. Send a personalized greeting card using the curated selection if illustrations and colors.
+                    <br><br>
+                    <a class="fullscreen-slide__text-ref" href='#' target='_blank' rel='noopener noreferrer'>Discover the new collection</a>
+                  </p>
+                </div>
+              </div>
+              <div class='swiper-slide fullscreen-slide' style="background-image: url(./img/content/hero2.webp);">
+                <div class="fullscreen-slide__body container">
+                  <h1 class="fullscreen-slide__title">Defender of the Fatherland day</h1>
+                  <div class="fullscreen-slide__decor">
+                    <img src="img/text-circle.svg" alt='' width=110 height=110>
+                  </div>
+                  <p class="fullscreen-slide__text">
+                    Special Touch. Send a personalized greeting card using the curated selection if illustrations and colors.
+                    <br><br>
+                    <a class="fullscreen-slide__text-ref" href='#' target='_blank' rel='noopener noreferrer'>Discover the new collection</a>
+                  </p>
+                </div>
+              </div>
+              <div class='swiper-slide fullscreen-slide' style="background-image: url(./img/content/hero3.webp);">
+                <div class="fullscreen-slide__body container">
+                  <h1 class="fullscreen-slide__title">Marvel guardians day</h1>
+                  <div class="fullscreen-slide__decor">
+                    <img src="img/text-circle.svg" alt='' width=110 height=110>
+                  </div>
+                  <p class="fullscreen-slide__text">
+                    Special Touch. Send a personalized greeting card using the curated selection if illustrations and colors.
+                    <br><br>
+                    <a class="fullscreen-slide__text-ref" href='#' target='_blank' rel='noopener noreferrer'>Discover the new collection</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='swiper-pagination fullscreen__pag'></div>
+      </section>
+      <section class='slider block'>
+        <div class='slider__body container'>
+          <h2 tabindex='0' class='slider__title title'>Hand-picked Daily</h2>
+          <div class="slider__control">
+            <button class='slider__prev' id="sliderPrev1">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(-180 32 32)" fill="#0D0D0E" />
+                <path d="M15.4996 15.5L18 17.8328L16.7502 19L13 15.5L16.7502 12L18 13.1672L15.4996 15.5Z" fill="white" />
+              </svg>
+            </button>
+            <button class='slider__next' id="sliderNext1">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#0D0D0E" />
+                <path d="M16.5004 16.5L14 14.1672L15.2498 13L19 16.5L15.2498 20L14 18.8328L16.5004 16.5Z" fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class="decor-line">
+            <div class="decor-line__subline"></div>
+          </div>
+          <div class="slider__slider-wrapper">
+            <div class='swiper slider__slider-element' id="slider1">
+              <div class='swiper-wrapper'>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card1img.avif" type="image/avif"><source srcset="img/content/card1img.webp" type="image/webp"><img src="img/content/card1img.jpg" loading='lazy' alt='Must Have' width=264 height=360></picture>
+                      </div>
+                      <span class="collection-card__title">Must Have</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card2.avif" type="image/avif"><source srcset="img/content/card2.webp" type="image/webp"><img src="img/content/card2.jpg" loading='lazy' alt='New arrival' width=264 height=360></picture>
+                      </div>
+                      <span class="collection-card__title">New arrival</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card3.avif" type="image/avif"><source srcset="img/content/card3.webp" type="image/webp"><img src="img/content/card3.jpg" loading='lazy' alt='The Look' width=264 height=360></picture>
+                      </div>
+                      <span class="collection-card__title">The Look</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card4.avif" type="image/avif"><source srcset="img/content/card4.webp" type="image/webp"><img src="img/content/card4.jpg" loading='lazy' alt='Insta shock' width=264 height=360></picture>
+                      </div>
+                      <span class="collection-card__title">Insta shock</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card5.avif" type="image/avif"><source srcset="img/content/card5.webp" type="image/webp"><img src="img/content/card5.jpg" loading='lazy' alt='Just Chill' width=264 height=360></picture>
+                      </div>
+                      <span class="collection-card__title">Just Chill</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card5.avif" type="image/avif"><source srcset="img/content/card5.webp" type="image/webp"><img src="img/content/card5.jpg" loading='lazy' alt='Just Chill' width=264 height=360></picture>
+                      </div>
+                      <span class="collection-card__title">Just Chill</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='slider slider_mini-cards block'>
+        <div class='slider__body container'>
+          <h2 tabindex='0' class='slider__title title'>Trending now</h2>
+          <div class="slider__control">
+            <button class='slider__prev' id="sliderPrev2">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(-180 32 32)" fill="#0D0D0E" />
+                <path d="M15.4996 15.5L18 17.8328L16.7502 19L13 15.5L16.7502 12L18 13.1672L15.4996 15.5Z" fill="white" />
+              </svg>
+            </button>
+            <button class='slider__next' id="sliderNext2">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#0D0D0E" />
+                <path d="M16.5004 16.5L14 14.1672L15.2498 13L19 16.5L15.2498 20L14 18.8328L16.5004 16.5Z" fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class="decor-line">
+            <div class="decor-line__subline"></div>
+          </div>
+          <div class="slider__slider-wrapper">
+            <div class='swiper slider__slider-element' id="slider2">
+              <div class='swiper-wrapper'>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini1.avif" type="image/avif"><source srcset="img/content/card-mini1.webp" type="image/webp"><img src="img/content/card-mini1.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini2.avif" type="image/avif"><source srcset="img/content/card-mini2.webp" type="image/webp"><img src="img/content/card-mini2.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini3.avif" type="image/avif"><source srcset="img/content/card-mini3.webp" type="image/webp"><img src="img/content/card-mini3.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini4.avif" type="image/avif"><source srcset="img/content/card-mini4.webp" type="image/webp"><img src="img/content/card-mini4.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini5.avif" type="image/avif"><source srcset="img/content/card-mini5.webp" type="image/webp"><img src="img/content/card-mini5.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini6.avif" type="image/avif"><source srcset="img/content/card-mini6.webp" type="image/webp"><img src="img/content/card-mini6.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini7.avif" type="image/avif"><source srcset="img/content/card-mini7.webp" type="image/webp"><img src="img/content/card-mini7.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+<picture><source srcset="img/content/card-mini8.avif" type="image/avif"><source srcset="img/content/card-mini8.webp" type="image/webp"><img src="img/content/card-mini8.jpg" loading='lazy' alt='' width=158 height=200></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <section id="search" class="modal-window">
+    <div class="modal-window__body">
+      <div class="modal-window__content">
+        <form class="searchbar">
+          <input id="searchInput" class="searchbar__input" type="search" placeholder="input" required="Name of product...">
+          <button aria-label="search" class="searchbar__submit" type="submit">
+            <img src="img/header/loupe.svg" alt="search">
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer__body">
+    <div class="footer__top">
+      <div class="footer__socials">
+        <a href="#" class="footer__social-item">
+          <img src="img/footer/twitter.svg" loading='lazy' alt='twitter'>
+        </a>
+        <a href="#" class="footer__social-item">
+          <img src="img/footer/inst.svg" loading='lazy' alt='instagramm'>
+        </a>
+        <a href="#" class="footer__social-item">
+          <img src="img/footer/facebook.svg" loading='lazy' alt='facebook'>
+        </a>
+        <a href="#" class="footer__social-item">
+          <img src="img/footer/pinterest.svg" loading='lazy' alt='pinterest'>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copyright">Copyright © 2022</span>
+    </div>
+  </div>
+</footer>
+</body>
+
+
+<script type="module" src="scripts/script.js"></script>
+
+
+<!-- Swiper -->
+<script type="module" src="scripts/sliders.js"></script>
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<script src="scripts/swiper-bundle.min.js"></script>
+
+
+
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->

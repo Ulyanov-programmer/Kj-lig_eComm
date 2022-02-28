@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+@@include('_head.htm', {
+"title": "Kjølig",
+'product': false,
+'categories': false,
+})
+
+<body>
+  @@include('_header.htm', {})
+
+  <main class="main">
+    <div class="main__body">
+      <section class="fullscreen">
+        <h1 hidden>Your title for searchers</h1>
+        <div class="fullscreen__body">
+          <div class='fullscreen__slider swiper'>
+            <div class='swiper-wrapper'>
+              <div class='swiper-slide fullscreen-slide' style="background-image: url(./img/content/hero.webp);">
+                <div class="fullscreen-slide__body container">
+                  <h2 class="fullscreen-slide__title">Valentine’s day</h2>
+                  <div class="fullscreen-slide__decor">
+                    <img src="img/text-circle.svg" alt='' width=110 height=110>
+                  </div>
+                  <p class="fullscreen-slide__text">
+                    Special Touch. Send a personalized greeting card using the curated selection if illustrations and colors.
+                    <br><br>
+                    <a class="fullscreen-slide__text-ref" href='#' target='_blank' rel='noopener noreferrer'>Discover the new collection</a>
+                  </p>
+                </div>
+              </div>
+              <div class='swiper-slide fullscreen-slide' style="background-image: url(./img/content/hero2.webp);">
+                <div class="fullscreen-slide__body container">
+                  <h1 class="fullscreen-slide__title">Defender of the Fatherland day</h1>
+                  <div class="fullscreen-slide__decor">
+                    <img src="img/text-circle.svg" alt='' width=110 height=110>
+                  </div>
+                  <p class="fullscreen-slide__text">
+                    Special Touch. Send a personalized greeting card using the curated selection if illustrations and colors.
+                    <br><br>
+                    <a class="fullscreen-slide__text-ref" href='#' target='_blank' rel='noopener noreferrer'>Discover the new collection</a>
+                  </p>
+                </div>
+              </div>
+              <div class='swiper-slide fullscreen-slide' style="background-image: url(./img/content/hero3.webp);">
+                <div class="fullscreen-slide__body container">
+                  <h1 class="fullscreen-slide__title">Marvel guardians day</h1>
+                  <div class="fullscreen-slide__decor">
+                    <img src="img/text-circle.svg" alt='' width=110 height=110>
+                  </div>
+                  <p class="fullscreen-slide__text">
+                    Special Touch. Send a personalized greeting card using the curated selection if illustrations and colors.
+                    <br><br>
+                    <a class="fullscreen-slide__text-ref" href='#' target='_blank' rel='noopener noreferrer'>Discover the new collection</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='swiper-pagination fullscreen__pag'></div>
+      </section>
+      <section class='slider block'>
+        <div class='slider__body container'>
+          <h2 tabindex='0' class='slider__title title'>Hand-picked Daily</h2>
+          <div class="slider__control">
+            <button class='slider__prev' id="sliderPrev1">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(-180 32 32)" fill="#0D0D0E" />
+                <path d="M15.4996 15.5L18 17.8328L16.7502 19L13 15.5L16.7502 12L18 13.1672L15.4996 15.5Z" fill="white" />
+              </svg>
+            </button>
+            <button class='slider__next' id="sliderNext1">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#0D0D0E" />
+                <path d="M16.5004 16.5L14 14.1672L15.2498 13L19 16.5L15.2498 20L14 18.8328L16.5004 16.5Z" fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class="decor-line">
+            <div class="decor-line__subline"></div>
+          </div>
+          <div class="slider__slider-wrapper">
+            <div class='swiper slider__slider-element' id="slider1">
+              <div class='swiper-wrapper'>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card1img.jpg" loading='lazy' alt='Must Have' width=264 height=360>
+                      </div>
+                      <span class="collection-card__title">Must Have</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card2.jpg" loading='lazy' alt='New arrival' width=264 height=360>
+                      </div>
+                      <span class="collection-card__title">New arrival</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card3.jpg" loading='lazy' alt='The Look' width=264 height=360>
+                      </div>
+                      <span class="collection-card__title">The Look</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card4.jpg" loading='lazy' alt='Insta shock' width=264 height=360>
+                      </div>
+                      <span class="collection-card__title">Insta shock</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card5.jpg" loading='lazy' alt='Just Chill' width=264 height=360>
+                      </div>
+                      <span class="collection-card__title">Just Chill</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card5.jpg" loading='lazy' alt='Just Chill' width=264 height=360>
+                      </div>
+                      <span class="collection-card__title">Just Chill</span>
+                      <p class="collection-card__about">List from stylist Hannah Berns</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='slider slider_mini-cards block'>
+        <div class='slider__body container'>
+          <h2 tabindex='0' class='slider__title title'>Trending now</h2>
+          <div class="slider__control">
+            <button class='slider__prev' id="sliderPrev2">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(-180 32 32)" fill="#0D0D0E" />
+                <path d="M15.4996 15.5L18 17.8328L16.7502 19L13 15.5L16.7502 12L18 13.1672L15.4996 15.5Z" fill="white" />
+              </svg>
+            </button>
+            <button class='slider__next' id="sliderNext2">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#0D0D0E" />
+                <path d="M16.5004 16.5L14 14.1672L15.2498 13L19 16.5L15.2498 20L14 18.8328L16.5004 16.5Z" fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class="decor-line">
+            <div class="decor-line__subline"></div>
+          </div>
+          <div class="slider__slider-wrapper">
+            <div class='swiper slider__slider-element' id="slider2">
+              <div class='swiper-wrapper'>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini1.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini2.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini3.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini4.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini5.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini6.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini7.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='swiper-slide slider__slide'>
+                  <div class="collection-card collection-card_mini">
+                    <div class="collection-card__body">
+                      <div class="collection-card__image adaptive-image">
+                        <img src="img/content/card-mini8.jpg" loading='lazy' alt='' width=158 height=200>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <section id="search" class="modal-window">
+    <div class="modal-window__body">
+      <div class="modal-window__content">
+        <form class="searchbar">
+          <input id="searchInput" class="searchbar__input" type="search" placeholder="input" required="Name of product...">
+          <button aria-label="search" class="searchbar__submit" type="submit">
+            <img src="img/header/loupe.svg" alt="search">
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  @@include('_footer.htm', {})
+</body>
+
+@@include('_scripts.htm', {
+'swiper': true,
+'generalScript': true,
+'productPage': false,
+'categories': false,
+})
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->

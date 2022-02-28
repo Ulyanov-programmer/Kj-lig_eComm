@@ -1,0 +1,29 @@
+.submenu-open-button {
+  position: relative
+}
+
+.submenu {
+  z-index: 1
+  position: absolute
+  top: 100%
+  hide()
+  border-radius: 10px
+  border: 2px solid #ebe5dc
+  background: var(--bg)
+  color: var(--text-c)
+  transition: all 0.2s ease
+
+  &.show {
+    position: absolute
+    show()
+    flex-content-position($jc: center, $ai: center)
+  }
+
+  &_to-left {
+    right: 0
+  }
+
+  &_to-right {
+    left: 0
+  }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+@@include('_head.htm', {
+"title": "Some category",
+'product': false,
+'categories': true,
+})
+
+<body>
+  @@include('_header.htm', {})
+
+  <main class="main">
+    <div class="main__body">
+      <section class='categories-row'>
+        <div class='categories-row__body container'>
+          <ul class="categories-row__list">
+            <li class="categories-row__li">
+              <a href='#' class="categories-row__element" target='_blank' rel='noopener noreferrer'>
+                Swimwear
+              </a>
+            </li>
+            <li class="categories-row__li">
+              <a href='#' class="categories-row__element" target='_blank' rel='noopener noreferrer'>
+                Pants
+              </a>
+            </li>
+            <li class="categories-row__li">
+              <a href='#' class="categories-row__element active" target='_blank' rel='noopener noreferrer'>
+                T-Shirts for men
+              </a>
+            </li>
+            <li class="categories-row__li">
+              <a href='#' class="categories-row__element" target='_blank' rel='noopener noreferrer'>
+                Underwear & Socs
+              </a>
+            </li>
+            <li class="categories-row__li">
+              <a href='#' class="categories-row__element" target='_blank' rel='noopener noreferrer'>
+                Other
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class='stories block'>
+        <div class='stories__body container'>
+          <!-- Use https://flyvi.io for correct work with stories. 
+              Below you can see examples. -->
+          <article class="stories__story">
+            <img src="img/content/storiesExample/storie.png" loading='lazy' alt='story' width=78 height=98>
+          </article>
+          <article class="stories__story">
+            <img src="img/content/storiesExample/storie2.png" loading='lazy' alt='story' width=78 height=98>
+          </article>
+          <article class="stories__story">
+            <img src="img/content/storiesExample/storie3.png" loading='lazy' alt='story' width=78 height=98>
+          </article>
+          <article class="stories__story">
+            <img src="img/content/storiesExample/storie4.png" loading='lazy' alt='story' width=78 height=98>
+          </article>
+          <article class="stories__story">
+            <img src="img/content/storiesExample/storie5.png" loading='lazy' alt='story' width=78 height=98>
+          </article>
+        </div>
+      </section>
+      <section class='products block'>
+        <div class='products__body container'>
+          <h1 tabindex='0' class='products__title title'>T-Shirts for men</h1>
+          <div class="products__actions">
+            <button class='products__button products__new submenu-open-button' type='button'>New
+              <svg width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 1.86025L4.16627 0.359985L5 1.10985L2.5 3.35999L-9.83564e-08 1.10985L0.833726 0.359986L2.5 1.86025Z" fill="#0D0D0E" />
+              </svg>
+
+              <ul id="newMenu" class="submenu submenu_to-right">
+                <li>You can put your filtres here.</li>
+              </ul>
+            </button>
+            <button class='products__button products__filters submenu-open-button' type='button'>Filters
+              <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.25 3.05933V1.25933C2.25 1.13998 2.29741 1.02552 2.3818 0.941128C2.46619 0.856737 2.58065 0.809326 2.7 0.809326H8.55C8.66935 0.809326 8.78381 0.856737 8.8682 0.941128C8.95259 1.02552 9 1.13998 9 1.25933V7.10933C9 7.22867 8.95259 7.34313 8.8682 7.42752C8.78381 7.51192 8.66935 7.55933 8.55 7.55933H6.75V9.35618C6.75 9.60638 6.54795 9.80933 6.29685 9.80933H0.45315C0.393625 9.80939 0.334673 9.7977 0.279667 9.77495C0.224662 9.7522 0.174683 9.71882 0.132593 9.67673C0.0905021 9.63464 0.0571255 9.58466 0.0343736 9.52966C0.0116216 9.47465 -5.89757e-05 9.4157 2.23902e-07 9.35618L0.00135023 3.51248C0.00135023 3.26228 0.2034 3.05933 0.4545 3.05933H2.25ZM3.15 3.05933H6.29685C6.54705 3.05933 6.75 3.26138 6.75 3.51248V6.65933H8.1V1.70933H3.15V3.05933ZM5.85 3.95933H0.90135L0.9 8.90933H5.85V3.95933ZM2.92635 8.00933L1.33515 6.41813L1.97145 5.78183L2.92635 6.73673L4.83525 4.82738L5.47155 5.46368L2.92635 8.00933Z"
+                  fill="#0D0D0E" />
+              </svg>
+
+              <ul id="filtersMenu" class="submenu submenu_to-left">
+                <li>You can put your filtres here.</li>
+              </ul>
+            </button>
+          </div>
+          <div class="products__content">
+            @@include('_category-product.htm',
+            {'src': 'img/content/categ-products/product.jpg', 'subtext': 'j]wpgiw[og'})
+            @@include('_category-product.htm',
+            {'src': 'img/content/categ-products/product2.jpg', 'subtext': ''})
+            @@include('_category-product.htm',
+            {'src': 'img/content/categ-products/product3.jpg', 'subtext': 'Logo printed crew neck T-shirt'})
+            @@include('_category-product.htm',
+            {'src': 'img/content/categ-products/product4.jpg', 'subtext': ''})
+            @@include('_category-product.htm', {
+            'src': 'img/content/categ-products/product5.jpg', 'subtext': 'lorem ispub ispum lorem lorem lorem lorem lorem'})
+            @@include('_category-product.htm',
+            {'src': 'img/content/categ-products/product6.jpg', 'subtext': ''})
+            @@include('_category-product.htm',
+            {'src': 'img/content/categ-products/product7.jpg', 'subtext': ''})
+            @@include('_category-product.htm',
+            {'src': 'img/content/categ-products/product8.jpg', 'subtext': ''})
+          </div>
+          <div class="products__footer">
+            <button id="toTop" class='products__to-top-btn' aria-label='to top of page' type='button'>
+              <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="35" cy="35" r="35" fill="#0D0D0E" fill-opacity="0.5" />
+                <path
+                  d="M36.222 21.828L36.222 54L34.222 54L34.222 21.828L28.858 27.192L27.444 25.778L35.222 18L43 25.778L41.586 27.192L36.222 21.828Z"
+                  fill="#fff" />
+                <defs>
+                  <filter id="filter0_b_11_525" x="-30" y="-30" width="130" height="130" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feGaussianBlur in="BackgroundImage" stdDeviation="15" />
+                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_11_525" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_11_525" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </button>
+            <button class='products__load' type='button'>Load more</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <section id="search" class="modal-window">
+    <div class="modal-window__body">
+      <div class="modal-window__content">
+        <form class="searchbar">
+          <input id="searchInput" class="searchbar__input" type="search" placeholder="input" required="Name of product...">
+          <button aria-label="search" class="searchbar__submit" type="submit">
+            <img src="img/header/loupe.svg" alt="search">
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  @@include('_footer.htm', {})
+</body>
+
+@@include('_scripts.htm', {
+'swiper': false,
+'generalScript': true,
+'productPage': false,
+'categories': true,
+})
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->

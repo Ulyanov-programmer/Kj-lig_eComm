@@ -1,0 +1,100 @@
+<header class="header">
+  <div class="header__body">
+    <div class="header__top">
+      <div class="header__top-container container">
+        <ul>
+          <li><a class='header__top-ref' href='#' target='_blank' rel='noopener noreferrer'>Women</a></li>
+          <li><a class='header__top-ref' href='#' target='_blank' rel='noopener noreferrer'>Men</a></li>
+          <li><a class='header__top-ref' href='#' target='_blank' rel='noopener noreferrer'>Kids</a></li>
+          <li>
+            <button id="themeToggler" class='header__top-ref' type='button'>Toggle theme</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__bottom-container container">
+        <nav class="header__navmenu navmenu">
+          <div class="navmenu__body">
+            <ul class='navmenu__list'>
+              <li><a class="active" href='/' target='_blank' rel='noopener noreferrer'>Main</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>New in</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Shop By</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Brand</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Cloathing</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Shoes</a></li>
+              <li><a href='#' target='_blank' rel='noopener noreferrer'>Accessories</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__left-menu">
+          <button aria-label="burger-menu" type="button" id="burgerButton" class="header__burger burger-btn">
+            <svg class="burger-btn__svg" width="25" height="30" viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
+              <rect class="burger-btn__rect-top" width="100%" height="10%" x="0" y="0%" fill="#fff" />
+              <rect class="burger-btn__rect-center" width="60%" height="10%" x="0" y="45%" fill="#fff" />
+              <rect class="burger-btn__rect-bottom" width="100%" height="10%" x="0" y="90%" fill="#fff" />
+            </svg>
+          </button>
+          <button data-modal-link="search" type="button" aria-label="search product" class="actions__item">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
+                fill="#0D0D0E" />
+            </svg>
+          </button>
+        </div>
+        <a href="/" class="header__logo logo" aria-label="logo-RefToMainPage">
+          @@include("_logo.htm" {})
+        </a>
+        <div class="header__actions actions">
+          <button data-modal-link="search" type="button" aria-label="search product" class="actions__item actions__search">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
+                fill="#0D0D0E" />
+            </svg>
+          </button>
+          <button type="button" id="favorites" aria-label="favorites" class="actions__item actions__favorites submenu-open-button">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.001 1.52898C12.35 -0.58002 15.98 -0.51002 18.243 1.75698C20.505 4.02498 20.583 7.63698 18.479 9.99298L9.99901 18.485L1.52101 9.99298C-0.582994 7.63698 -0.503994 4.01898 1.75701 1.75698C4.02201 -0.50702 7.64501 -0.58302 10.001 1.52898ZM16.827 3.16998C15.327 1.66798 12.907 1.60698 11.337 3.01698L10.002 4.21498L8.66601 3.01798C7.09101 1.60598 4.67601 1.66798 3.17201 3.17198C1.68201 4.66198 1.60701 7.04698 2.98001 8.62298L10 15.654L17.02 8.62398C18.394 7.04698 18.319 4.66498 16.827 3.16998Z"
+                fill="#0D0D0E" />
+            </svg>
+
+            <ul id="favoritesMenu" class="submenu submenu_to-left">
+              <li>@@include('_productCard.htm' {})</li>
+              <li>@@include('_productCard.htm' {})</li>
+            </ul>
+            <div class="actions__counter active">2</div>
+          </button>
+          <button type="button" id="card" aria-label="your cart" class="actions__item submenu-open-button">
+            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17 20H1C0.734784 20 0.48043 19.8946 0.292893 19.7071C0.105357 19.5196 0 19.2652 0 19V1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V19C18 19.2652 17.8946 19.5196 17.7071 19.7071C17.5196 19.8946 17.2652 20 17 20ZM16 18V2H2V18H16ZM6 4V6C6 6.79565 6.31607 7.55871 6.87868 8.12132C7.44129 8.68393 8.20435 9 9 9C9.79565 9 10.5587 8.68393 11.1213 8.12132C11.6839 7.55871 12 6.79565 12 6V4H14V6C14 7.32608 13.4732 8.59785 12.5355 9.53553C11.5979 10.4732 10.3261 11 9 11C7.67392 11 6.40215 10.4732 5.46447 9.53553C4.52678 8.59785 4 7.32608 4 6V4H6Z"
+                fill="#0D0D0E" />
+            </svg>
+
+            <ul id="cardMenu" class="submenu submenu_to-left">
+              <li>@@include('_productCard.htm' {})</li>
+            </ul>
+          </button>
+        </div>
+      </div>
+
+
+      <nav class="fullscreen-navmenu">
+        <div class="fullscreen-navmenu__body">
+          <ul>
+            <li><a class="fs-element" href='/' target='_blank' rel='noopener noreferrer'>Main</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>New in</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Shop By</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Brand</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Cloathing</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Shoes</a></li>
+            <li><a class="fs-element" href='#' target='_blank' rel='noopener noreferrer'>Accessories</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

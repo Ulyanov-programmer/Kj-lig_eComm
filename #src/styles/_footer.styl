@@ -1,0 +1,36 @@
+@import '_mixins'
+
+.footer {
+  background: #303030
+
+  &__body {
+    text-align: center
+  }
+
+  &__top {
+    padding: 20px 30px 20px 30px
+  }
+
+  &__socials {
+    firstLevelElementsMargin: 'right' 10
+  }
+
+  &__social-item {
+    padding: 5px 5px 5px 5px
+    display: inline-block
+    border: 1px solid rgba(255, 255, 255, 0)
+
+    &:hover, &:focus {
+      border-color:#fff
+    }
+  }
+
+  &__bottom {
+    background: #0d0d0e
+    padding: 20px 18px 20px 18px
+  }
+
+  &__copyright {
+    color: #fff
+  }
+}

@@ -1,0 +1,150 @@
+@import '_mixins'
+
+:root {
+  --line-c: #EBE5DC
+}
+
+.dark {
+  --line-c: #48433D
+}
+
+.categories-row {
+  &__body {
+  }
+
+  &__list {
+    overflow-y: hidden
+    overflow-x: scroll
+    flex-set: row nowrap
+    firstLevelElementsMargin: 'right' 15
+    white-space: nowrap
+    margin: 0 -5px
+  }
+
+  &__element {
+    display: inline-block
+    padding: 10px 5px
+    font-size: adapt-fsize(15, 14)
+    opacity: 0.5
+    color: var(--text-c)
+    transition: all 0.2s ease
+
+    &.active, &:hover, &:focus {
+      opacity: 1
+    }
+  }
+}
+
+.stories {
+  border-top: 1px solid var(--line-c)
+  border-bottom: 1px solid var(--line-c)
+
+  &__body {
+    overflow-y: hidden
+    overflow-x: scroll
+    flex-set: row nowrap
+    white-space: nowrap
+  }
+
+  &__story {
+    display: inline-block
+    padding: 5px
+  }
+}
+
+.products {
+  &__body {
+  }
+
+  &__content {
+    padding-top: 15px
+    column-count: 2
+    column-gap: 10px
+
+    >* {
+      padding-bottom: 15px
+    }
+
+    @media (min-width: 426px) {
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      align-items: center
+      gap: 15px
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    @media (min-width: 1440px) {
+      grid-template-columns: repeat(6, 1fr)
+    }
+  }
+
+  &__title {
+    text-align: center
+    padding-bottom: 15px
+  }
+
+  &__actions {
+    position: sticky
+    top: 5px
+    flex-set: row nowrap
+    flex-content-position($jc: center, $ai: center)
+    firstLevelElementsMargin: 'right' 10
+  }
+
+  &__button {
+    padding: 12px
+    background: var(--bg)
+    color: var(--text-c)
+    flex-set: row nowrap
+    align-items: center
+    text-transform: uppercase
+    font-weight: 500
+    border-radius: 8px
+    transition: all 0.2s ease
+    filter: brightness(97%)
+
+    svg {
+      margin-left: 5px
+
+      path {
+        fill: var(--text-c)
+      }
+    }
+
+    &:hover, &:focus {
+      text-decoration: underline
+    }
+  }
+
+  &__new {
+  }
+
+  &__filters {
+  }
+
+  &__footer {
+    flex-set: column nowrap
+    flex-content-position($jc: center, $ai: center)
+    firstLevelElementsMargin 'bottom' 15
+  }
+
+  &__to-top-btn {
+  }
+
+  &__load {
+    font-size 16px
+    background #000
+    color: #fff
+    padding: 15px
+    border-radius: 10px
+    transition: all .2s ease
+    border: 1px solid #fff
+
+    &:hover,&:focus {
+      filter: invert()
+    }
+  }
+}

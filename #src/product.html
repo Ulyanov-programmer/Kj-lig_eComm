@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+@@include('_head.htm', {
+"title": "Some product",
+'product': true,
+'categories': false,
+})
+
+<body>
+  @@include('_header.htm', {})
+
+  <main class="main">
+    <div class="main__body">
+      <section class="product-block block">
+        <div class="product-block__body">
+          <div class="product-block__image">
+            <img class="product-content" src="img/content/product-S.jpg" alt='product'>
+            <img class="product-content" src="img/content/product-S.jpg" loading='lazy' alt='product'>
+            <img class="product-content" src="img/content/product-S.jpg" loading='lazy' alt='product'>
+            <img class="product-content" src="img/content/product-S.jpg" loading='lazy' alt='product'>
+            <img class="product-content" src="img/content/product-S.jpg" loading='lazy' alt='product'>
+            <div class="product-block__in-favs favs">
+              @@include('_favs.htm', {})
+            </div>
+            <div class="decor-line">
+              <div class="decor-line__subline"></div>
+            </div>
+          </div>
+          <div class="product-block__about">
+            <div class="product-block__main-about">
+              <h1 class="product-block__title">logo printed crew neck T-shirt</h1>
+              <span class="product-block__price dollars">650</span>
+            </div>
+            <span class="product-block__brand-name new">Balenciaga</span>
+            <div class="product-block__accord-buttons">
+              <button data-toggle-elem-number="0" class='product-block__accord-btn' aria-label='size S' type='button'>S</button>
+              <button data-toggle-elem-number="1" class='product-block__accord-btn' aria-label='size M' type='button'>M</button>
+              <button data-toggle-elem-number="2" class='product-block__accord-btn' aria-label='size L' type='button'>L</button>
+              <button data-toggle-elem-number="3" class='product-block__accord-btn' aria-label='size XL' type='button'>XL</button>
+              <button data-toggle-elem-number="4" class='product-block__accord-btn' aria-label='size XXL' type='button'>XXL</button>
+            </div>
+            <button class='product-block__add-to-card' type='button'>Add to card</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <section id="search" class="modal-window">
+    <div class="modal-window__body">
+      <div class="modal-window__content">
+        <form class="searchbar">
+          <input id="searchInput" class="searchbar__input" type="search" placeholder="input" required="Name of product...">
+          <button aria-label="search" class="searchbar__submit" type="submit">
+            <img src="img/header/loupe.svg" alt="search">
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  @@include('_footer.htm', {})
+</body>
+
+@@include('_scripts.htm', {
+'swiper': false,
+'generalScript': true,
+'productPage': true,
+'categories': false,
+})
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->
