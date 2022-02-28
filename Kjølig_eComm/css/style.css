@@ -974,7 +974,13 @@ body button {
 }
 
 .collection-card {
+  color: var(--text-c);
   max-width: 264px;
+}
+
+.collection-card:hover .collection-card__title,
+.collection-card:focus .collection-card__title {
+  text-decoration: underline;
 }
 
 .collection-card_mini .collection-card__image {

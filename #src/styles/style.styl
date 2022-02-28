@@ -220,6 +220,13 @@ body {
 }
 
 .collection-card {
+  &:hover, &:focus {
+    .collection-card__title {
+      text-decoration: underline
+    }
+  }
+
+  color: var(--text-c)
   max-width: 264px
 
   &_mini {
