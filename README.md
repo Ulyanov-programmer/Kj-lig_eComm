@@ -16,5 +16,7 @@ Kjølig_eComm - the multipage website created for my portfolio.
 <br>
 
 You can see this [this on GitHub Pages].
+Product page: https://ulyanov-programmer.github.io/Kjolig_eComm/Kjølig_eComm/product.html
+Category page: https://ulyanov-programmer.github.io/Kjolig_eComm/Kjølig_eComm/category.html
 
-[this on GitHub Pages]: https://ulyanov-programmer.github.io/Kjølig_eComm/Kjølig_eComm
+[this on GitHub Pages]: https://ulyanov-programmer.github.io/Kjolig_eComm/Kjølig_eComm/
